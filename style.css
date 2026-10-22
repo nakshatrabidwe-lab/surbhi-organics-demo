@@ -97,3 +97,87 @@ dialog::backdrop{background:rgba(31,61,43,.55)}
   .nav ul{display:none;flex-direction:column;gap:.4rem;width:100%;order:5}.nav ul.open{display:flex}
   .nav nav{order:5;width:100%}
 }
+
+/* ---- BRAND & TRUST EXTENSIONS ---- */
+.badge-trust {
+  display: inline-block;
+  background: var(--sage-soft);
+  color: var(--forest);
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 99px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--sage);
+}
+
+/* High contrast primary CTA buttons */
+.cta-highlight {
+  background: var(--ochre) !important;
+  border-color: var(--ochre) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 12px rgba(138, 94, 11, 0.25);
+}
+.cta-highlight:hover {
+  background: #734e09 !important;
+  transform: translateY(-2px);
+}
+
+/* Trust Bar */
+.trust-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 5vw;
+  background: #fff;
+  border-top: 1px solid var(--beige);
+  border-bottom: 1px solid var(--beige);
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.trust-icon {
+  font-size: 2rem;
+}
+.trust-item strong {
+  display: block;
+  color: var(--forest);
+  font-size: 0.95rem;
+}
+.trust-item p {
+  margin: 0;
+  font-size: 0.82rem;
+  opacity: 0.8;
+}
+
+/* Story & Journal cards */
+.story-trust { background: var(--beige); }
+.story-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ochre);
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+.journal { background: var(--cream); }
+.section-sub { margin-top: -0.5rem; margin-bottom: 2rem; opacity: 0.8; }
+.journal-card h3 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+.blog-date { font-size: 0.8rem; font-weight: 700; color: var(--forest); }
+.read-more { display: inline-block; margin-top: 0.8rem; font-weight: 700; text-decoration: none; font-size: 0.9rem; color: var(--forest); }
+.read-more:hover { text-decoration: underline; }
+
+.cert-badge {
+  display: inline-block;
+  background: #eef6ec;
+  color: var(--green);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  margin-top: 0.3rem;
+}
+```[cite: 1, 2]

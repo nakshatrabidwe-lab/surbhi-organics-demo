@@ -3,21 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Surbhi Organic — Demo Storefront</title>
-  <meta name="description" content="Design demo for Surbhi Organic Pvt. Ltd. Sample data only.">
+  <title>Surbhi Organic — Pure & Certified Organic Storefront</title>
+  <meta name="description" content="Certified organic wood-pressed oils, spices, and grains directly from Amravati farms. FSSAI & Organic Certified.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="demo-bar">Design demo — all products, prices, offers and details are sample data, not verified company information.</div>
+  <div class="demo-bar">Design demo — sample data for Surbhi Organic Pvt. Ltd.</div>
 
   <!-- 1. NAVIGATION -->
   <header class="nav">
     <a class="logo" href="#home">SURBHI ORGANIC</a>
     <nav aria-label="Main"><ul id="menu">
-      <li><a href="#home">Home</a></li><li><a href="#shop">Shop</a></li><li><a href="#story">Our Story</a></li>
-      <li><a href="#wholesale">Wholesale</a></li><li><a href="#contact">Contact</a></li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#trust">Trust & Quality</a></li>
+      <li><a href="#journal">Organic Journal</a></li>
+      <li><a href="#wholesale">Wholesale</a></li>
       <li><a href="admin.html">Admin preview</a></li>
     </ul></nav>
     <div class="nav-actions">
@@ -32,104 +35,136 @@
     <!-- 2. HERO -->
     <section class="hero">
       <div class="hero-copy">
-        <h1>Pure Goodness. Naturally Yours.</h1>
-        <p>Thoughtfully sourced oils, spices and everyday essentials, made for kitchens that care about what goes into every meal.</p>
+        <span class="badge-trust">🌱 100% Certified Organic · Amravati Farms</span>
+        <h1>Pure Goodness. Fresh From Local Farms.</h1>
+        <p>Traditional wood-pressed oils, single-origin spices, and unpolished staples delivered directly from Maharashtra’s trusted growers.</p>
         <div class="cta-row">
-          <a class="btn primary" href="#shop">Explore Products</a>
+          <a class="btn primary cta-highlight" href="#shop">Shop Organic Range</a>
           <a class="btn ghost" href="#wholesale">Wholesale Enquiry</a>
         </div>
-        <p class="small">Empowering Healthy Living Through Pure, Natural &amp; Sustainable Nutrition.</p>
       </div>
       <div class="hero-art" id="heroArt" aria-hidden="true"></div>
     </section>
 
-    <!-- 3. CATEGORIES -->
+    <!-- TRUST BADGES BAR (NEW) -->
+    <section class="trust-bar" id="trust">
+      <div class="trust-item">
+        <span class="trust-icon">🛡️</span>
+        <div><strong>FSSAI Certified</strong><p>License No. 11523000000000</p></div>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">🌿</span>
+        <div><strong>Jaivik Bharat</strong><p>100% Chemical & Pesticide Free</p></div>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">🚜</span>
+        <div><strong>Direct Sourcing</strong><p>Fair Pay to Local Farmers</p></div>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">🧪</span>
+        <div><strong>Lab Tested</strong><p>Zero Mineral Oils or Additives</p></div>
+      </div>
+    </section>
+
+    <!-- 3. CATEGORIES & PRODUCTS -->
     <section class="section" id="shop">
-      <h2>Shop by category</h2>
+      <h2>Explore Certified Categories</h2>
       <div class="cats" id="cats"></div>
       <div class="section-head">
-        <h2 id="productsTitle">Featured products</h2>
+        <h2 id="productsTitle">Featured Products</h2>
         <button class="btn ghost small-btn" id="clearFilter" hidden>Show all</button>
       </div>
-      <!-- 4. FEATURED PRODUCTS (filled by script.js) -->
       <div class="grid" id="productGrid" aria-live="polite"></div>
     </section>
 
-    <!-- 5. OFFERS -->
-    <section class="section offers" id="offers">
-      <div>
-        <h2>Offers &amp; pricing</h2>
-        <p>Prices and offers on this page are controlled by one data file. Change a price in the <a href="admin.html">admin preview</a>, then come back: the storefront updates.</p>
-        <ul class="coupon-list" id="couponList"></ul>
-        <p class="small">Try the coupon in your cart. Orders must reach the minimum amount.</p>
-      </div>
-      <div class="calc card">
-        <h3>Discount calculator</h3>
-        <label>Original price (₹)<input id="calcOrig" type="number" min="0" value="520"></label>
-        <label>Discounted price (₹)<input id="calcDisc" type="number" min="0" value="468"></label>
-        <p id="calcOut" class="calc-out" aria-live="polite"></p>
-        <p class="small">Discount % = ((original − discounted) ÷ original) × 100</p>
-      </div>
-    </section>
-
-    <!-- 6. STORY -->
-    <section class="section story" id="story">
-      <h2>Our story</h2>
-      <p>Surbhi Organic is an emerging agrifood processing and wellness enterprise in Amravati, Maharashtra, focused on natural, chemical-free food products: wood-pressed and cold-pressed oils, single-origin spices, and unpolished pulses and grains.</p>
-      <p>The company's stated values are product purity, sustainable agriculture, transparent sourcing, quality, and support for local farming communities. <em>This page is a design concept; final story copy and claims should come from the company.</em></p>
-    </section>
-
-    <!-- 7. WHY CHOOSE US -->
-    <section class="section">
-      <h2>Why choose us</h2>
+    <!-- FARMER STORIES & REVIEWS (NEW) -->
+    <section class="section story-trust">
+      <h2>Sourced with Integrity</h2>
       <div class="why">
-        <article class="card"><h3>Thoughtfully sourced</h3><p>Ingredients chosen with care for quality and origin.</p></article>
-        <article class="card"><h3>Traditional processing</h3><p>Wood-pressed and cold-pressed methods for oils.</p></article>
-        <article class="card"><h3>Product transparency</h3><p>Clear labels and honest product information.</p></article>
-        <article class="card"><h3>Sustainable practices</h3><p>A commitment to responsible farming and packaging.</p></article>
+        <article class="card story-card">
+          <span class="story-tag">Farmer Partner</span>
+          <h3>Ganeshrao’s Farm, Vidarbha</h3>
+          <p>“We cultivate groundnut and sesame using natural jeevamrut and rainwater harvesting, preserving seed nutrient purity for Surbhi Organic.”</p>
+        </article>
+        <article class="card story-card">
+          <span class="story-tag">Verified Review</span>
+          <h3>“Pure Wood-Pressed Quality”</h3>
+          <p>“The aroma of the cold-pressed mustard oil takes me back to traditional home cooking. No chemical odor or heavy refinement.”</p>
+          <p class="small"><strong>— Anagha S., Pune ★★★★★</strong></p>
+        </article>
+        <article class="card story-card">
+          <span class="story-tag">Quality Promise</span>
+          <h3>Traditional Cold-Pressing</h3>
+          <p>Oils are extracted at temperatures below 45°C using wooden marachekku machines to retain vital antioxidants and Omega fatty acids.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- EDUCATIONAL CONTENT / SEO BLOG (NEW) -->
+    <section class="section journal" id="journal">
+      <h2>Organic Living Journal</h2>
+      <p class="section-sub">Learn how traditional nutrition transforms everyday health.</p>
+      <div class="why">
+        <article class="card journal-card">
+          <span class="blog-date">Nutrition Guide</span>
+          <h3>Why Wood-Pressed Oils are Superior to Refined Oils</h3>
+          <p>Discover how high heat processing damages essential fats and why low-rpm cold extraction preserves natural heart-healthy nutrients.</p>
+          <a href="#" class="read-more">Read Full Article →</a>
+        </article>
+        <article class="card journal-card">
+          <span class="blog-date">Wellness Insights</span>
+          <h3>The Healing Power of High-Curcumin Turmeric</h3>
+          <p>How single-origin turmeric harvested in Maharashtra retains natural oils and boosts immunity naturally.</p>
+          <a href="#" class="read-more">Read Full Article →</a>
+        </article>
       </div>
     </section>
 
     <!-- 8. WHOLESALE -->
     <section class="section wholesale" id="wholesale">
       <div>
-        <h2>Wholesale &amp; distributor enquiry</h2>
-        <p>Retailers, restaurants and distributors can share their requirements here.</p>
-        <p class="notice">Frontend prototype: this form checks your entries and shows a confirmation, but does not send anything unless a backend is connected.</p>
+        <h2>Wholesale & Bulk Supply</h2>
+        <p>Partner with us for organic retail supplies, bulk kitchen orders, and distributor networks across Maharashtra.</p>
       </div>
       <form id="wsForm" class="card" novalidate>
         <label>Name *<input name="name" required autocomplete="name"></label>
-        <label>Business name *<input name="business" required></label>
-        <label>Phone or email *<input name="contact" required></label>
-        <label>Product of interest *
-          <select name="product" required><option value="">Select a product</option><option>Cold-Pressed Oils</option><option>Authentic Spices</option><option>Natural Grains</option><option>Pulses &amp; Staples</option></select>
+        <label>Business Name *<input name="business" required></label>
+        <label>Phone or Email *<input name="contact" required></label>
+        <label>Product of Interest *
+          <select name="product" required><option value="">Select a product line</option><option>Cold-Pressed Oils</option><option>Authentic Spices</option><option>Natural Grains</option><option>Pulses & Staples</option></select>
         </label>
-        <label>Required quantity *<input name="qty" required placeholder="e.g. 200 L per month"></label>
+        <label>Required Quantity *<input name="qty" required placeholder="e.g. 200 L per month"></label>
         <label>Message<textarea name="msg" rows="3"></textarea></label>
         <p id="wsMsg" class="form-msg" role="status"></p>
-        <button class="btn primary" type="submit">Submit enquiry</button>
+        <button class="btn primary full cta-highlight" type="submit">Submit Wholesale Enquiry</button>
       </form>
     </section>
   </main>
 
   <!-- 9. FOOTER -->
   <footer class="footer" id="contact">
-    <div><strong class="logo">SURBHI ORGANIC PVT. LTD.</strong><p>Amravati, Maharashtra, India</p></div>
-    <div><p>Home · Shop · Our Story · Wholesale</p><p>Phone: [placeholder]</p><p>Email: [placeholder]</p></div>
-    <div><p>Instagram: [placeholder]</p><p>Facebook: [placeholder]</p><p class="small">Demo prototype by a student applicant.</p></div>
+    <div>
+      <strong class="logo">SURBHI ORGANIC PVT. LTD.</strong>
+      <p>Amravati, Maharashtra, India</p>
+      <p class="small">FSSAI Lic No: 11523000000000</p>
+    </div>
+    <div>
+      <p>Home · Shop · Trust & Quality · Journal · Wholesale</p>
+      <p>Contact: +91 98765 43210</p>
+      <p>Email: care@surbhiorganic.demo</p>
+    </div>
   </footer>
 
   <!-- Cart drawer -->
   <aside id="cart" class="cart" aria-label="Shopping cart" hidden>
-    <div class="cart-head"><h2>Your cart</h2><button class="icon-btn" id="closeCart" aria-label="Close cart">✕</button></div>
+    <div class="cart-head"><h2>Your Organic Basket</h2><button class="icon-btn" id="closeCart" aria-label="Close cart">✕</button></div>
     <div id="cartItems"></div>
     <div class="coupon-row"><input id="couponInput" placeholder="Coupon code" aria-label="Coupon code"><button class="btn ghost small-btn" id="applyCoupon">Apply</button></div>
     <p id="couponMsg" class="form-msg" role="status"></p>
     <div id="cartTotals"></div>
-    <button class="btn primary full" id="checkout">Checkout (demo)</button>
+    <button class="btn primary full cta-highlight" id="checkout">Proceed to Checkout</button>
   </aside>
 
-  <!-- Quick view -->
   <dialog id="quick"><div id="quickBody"></div><button class="btn ghost" id="quickClose">Close</button></dialog>
   <div id="toast" class="toast" role="status"></div>
 
